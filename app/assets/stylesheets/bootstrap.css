@@ -11200,3 +11200,7 @@ footer {
 .container {
   min-height: 80vh;
 }
+
+ul li {
+  list-style: none;
+}
