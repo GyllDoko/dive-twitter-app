@@ -1,0 +1,26 @@
+<%= render 'header' %>
+<div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+
+    <p id="notice"><%= notice %></p>
+    <h1>Post Detail</h1>
+    <div class="">
+        <div class="card w-50">
+            <% if @post.post_image.attached? %>
+            <%= image_tag @post.post_image, class: "card-img-top"%>
+            <%end %>
+
+            <div class="card-body">
+                <h5 class="card-title"><%= @post.title %></h5>
+                <p class="card-text"><%= @post.description %></p>
+            </div>
+            <div class="card-footer clearfix">
+                <small class="text-muted" style="float: right;"><%= @post.created_at %></small>
+
+                <p><%= link_to 'Edit', edit_post_path(@post), class: "btn btn-warning" %></p>
+                <p><%= link_to 'Back', posts_path , class: "btn btn-outline-secondary" %></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= render "footer" %>
