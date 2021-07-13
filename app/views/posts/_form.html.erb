@@ -1,4 +1,4 @@
-<%= form_with(model: post, local: true) do |form| %>
+<%= form_with(model: post, local: true, url: choose_new_or_edit) do |form| %>
 <% if post.errors.any? %>
 <div id="error_explanation" class="py-2 text-light text-center bg-danger w-100">
     <h6><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h6>
