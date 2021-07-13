@@ -6,12 +6,20 @@
         <% @posts.each do |post| %>
         <div class="col">
             <div class="card">
+                <%
+=begin%>
                 <% if post.post_image.attached? %>
                 <%= image_tag post.post_image, class: "card-img-top"%>
                 <%end %>
+                <%
+=end%>
 
                 <div class="card-body">
+                    <%
+=begin%>
                     <h5 class="card-title"><%= post.title %></h5>
+                    <%
+=end%>
                     <p class="card-text"><%= post.description %></p>
                 </div>
                 <div class="card-footer clearfix">
